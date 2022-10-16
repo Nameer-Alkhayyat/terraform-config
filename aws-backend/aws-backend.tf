@@ -43,3 +43,8 @@ resource "aws_iam_role" "cloudwatch-full" {
 }
 EOF
 }
+
+resource "aws_iam_role_policy_attachment" "cloudwatch-full-attachment" {
+    role = aws_iam_role.cloudwatch-full.name
+    policy_arn = "arn:aws:iam::aws:policy/CloudWatchFullAccess"
+}
