@@ -15,3 +15,31 @@ resource "aws_lambda_function" "ic-lambda" {
     }
   }
 }
+
+resource "aws_lambda_permission" "allow_api" {
+  statement_id  = "AllowAPIgatewayInvokation"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.ic-lambda.function_name
+  principal     = "apigateway.amazonaws.com"
+  source_arn    = "${aws_api_gateway_rest_api.api.execution_arn}/*/*/*"
+ 
+}
+
+resource "aws_iam_role" "cloudwatch-full" {
+  name = var.stage == "stage" ? "${var.projectName}-stage-cloudwatch-full-access" :  "${var.projectName}-cloudwatch-full-access"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "lambda.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+EOF
+}
