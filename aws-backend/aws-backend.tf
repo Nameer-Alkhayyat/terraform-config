@@ -10,8 +10,8 @@ resource "aws_lambda_function" "ic-lambda" {
   environment {
     variables = {
       MONGO_URI=var.envVarMongoUri
-      SWAGGER_ENABLED=var.envVarSwaggerEnabled
-      SWAGGER_USER=var.envVarSwaggerUser
+      # SWAGGER_ENABLED=var.envVarSwaggerEnabled
+      # SWAGGER_USER=var.envVarSwaggerUser
     }
   }
 }

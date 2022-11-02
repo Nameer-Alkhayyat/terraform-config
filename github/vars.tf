@@ -7,7 +7,7 @@ variable "stage" {
 
 # Github organization where the repo exists (repo named like projectName)
 variable "githubOrganisation" {
-  default = "as-ideas"
+  default = "Nameer-Alkhayyat"
 }
 
 # Personal Access Token to modify Github settings

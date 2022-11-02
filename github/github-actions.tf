@@ -1,11 +1,11 @@
-resource "aws_s3_bucket" "deployment" {
-  bucket = var.stage == "stage" ? "${var.projectName}-stage" : var.projectName
-  acl = "private"
+# resource "aws_s3_bucket" "deployment" {
+#   bucket = var.stage == "stage" ? "${var.projectName}-stage" : var.projectName
+#   acl = "private"
 
-  tags = {
-    stage = var.stage
-  }
-}
+#   tags = {
+#     stage = var.stage
+#   }
+# }
 
 resource "github_actions_secret" "githubNpmPat" {
   repository       = var.projectName
