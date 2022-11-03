@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "ic-lambda" {
-  filename      = "HelloWorld.zip"
+  filename      = "iendiwn.zip"
   function_name = var.stage == "stage" ? "${var.projectName}-stage" :  "${var.projectName}"
 
   handler = "index.handler"
