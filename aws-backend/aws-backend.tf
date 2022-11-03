@@ -11,11 +11,11 @@ resource "aws_lambda_function" "ic-lambda" {
     variables = {
       MONGO_URI=var.envVarMongoUri
       APPLE_NEWS_MONGO_URI=var.envVarAppleMongoUri
-      PLUSIR_USER = var.envVarPlusirUser
-      PLUSIR_PASSWORD= var.envVarPlusirPass
-      TWITTER_KEY= var.envVarTwitterKey
-      IMPORT_DATA= var.envVarImportData
-      TEST_MONGO_URI= var.envVarTestMongoUri
+      PLUSIR_USER=var.envVarPlusirUser
+      PLUSIR_PASSWORD=var.envVarPlusirPass
+      TWITTER_KEY=var.envVarTwitterKey
+      IMPORT_DATA=var.envVarImportData
+      TEST_MONGO_URI=var.envVarTestMongoUri
     }
   }
 }
