@@ -11,16 +11,44 @@ variable "envVarMongoUri" {
   sensitive   = true
 }
 
-# variable "envVarSwaggerEnabled" {
-#   description = "enables swagger endpoint"
-#   type        = string
-#   sensitive   = true
-#   default     = "true"
-# }
+variable "envVarAppleMongoUri" {
+  description = "connection string to Apple mongo"
+  type        = string
+  sensitive   = true
+}
+variable "envVarPlusirUser" {
+  description = "connection string to Plusir mongo"
+  type        = string
+  sensitive   = true
+}
+variable "envVarPlusirPass" {
+  description = "connection string to Plusir mongo"
+  type        = string
+  sensitive   = true
+}
+variable "envVarTwitterKey" {
+  description = "connection string to Twitter"
+  type        = string
+  sensitive   = true
+}
+variable "envVarImportData" {
+  description = "Import data if true"
+  type        = string
+  sensitive   = true
+}
+variable "envVarTestMongoUri" {
+  description = "connection string to mongo test"
+  type        = string
+  sensitive   = true
+}
 
-# variable "envVarSwaggerUser" {
-#   description = "swagger user"
-#   type        = string
-#   sensitive   = true
-#   default     = "admin"
-# }
+
+
+
+
+
+
+
+
+
+
