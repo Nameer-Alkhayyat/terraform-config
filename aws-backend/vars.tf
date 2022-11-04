@@ -2,7 +2,7 @@ variable "projectName" {
 }
 
 variable "stage" {
-    default = "stage" # stage | prod
+
 }
 
 variable "envVarMongoUri" {

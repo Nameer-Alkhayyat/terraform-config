@@ -1,6 +1,6 @@
 resource "aws_lambda_function" "ic-lambda" {
   filename      = "data/HelloWorld.zip"
-  function_name = var.stage == "stage" ? "${var.projectName}-stage" :  "${var.projectName}"
+  function_name = var.stage == "stage" ? "${var.projectName}-stage" :  "${var.projectName}-prod"
 
   handler = "index.handler"
   runtime = "nodejs16.x"
@@ -30,7 +30,7 @@ resource "aws_lambda_permission" "allow_api" {
 }
 
 resource "aws_iam_role" "cloudwatch-full" {
-  name = var.stage == "stage" ? "${var.projectName}-stage-cloudwatch-full-access" :  "${var.projectName}-cloudwatch-full-access"
+  name = var.stage == "stage" ? "${var.projectName}-stage-cloudwatch-full-access" :  "${var.projectName}-prod-cloudwatch-full-access"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",

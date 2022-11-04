@@ -1,6 +1,6 @@
 
 resource "aws_api_gateway_rest_api" "api" {
-  name = var.stage == "stage" ? "${var.projectName}-stage" :  "${var.projectName}"
+  name = var.stage == "stage" ? "${var.projectName}-stage" :  "${var.projectName}-prod"
   description = "api-gateway for ${var.projectName} ${var.stage}"
   endpoint_configuration {
     types = ["REGIONAL"]
