@@ -41,6 +41,24 @@ variable "envVarTestMongoUri" {
   type        = string
   sensitive   = true
 }
+variable "envVarRedisHost" {
+  description = "connection string to REDIS DB"
+  type        = string
+  sensitive   = true
+}
+
+variable "envVarRedisPassword" {
+  description = "connection string to REDIS DB"
+  type        = string
+  sensitive   = true
+}
+
+
+variable "envVarRedisName" {
+  description = "connection string to REDIS DB"
+  type        = string
+  sensitive   = true
+}
 
 
 

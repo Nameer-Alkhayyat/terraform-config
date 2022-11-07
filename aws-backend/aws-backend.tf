@@ -16,6 +16,9 @@ resource "aws_lambda_function" "ic-lambda" {
       TWITTER_KEY=var.envVarTwitterKey
       IMPORT_DATA=var.envVarImportData
       TEST_MONGO_URI=var.envVarTestMongoUri
+      REDIS_HOST=var.envVarRedisHost
+      REDIS_PASSWORD=var.envVarRedisPassword
+      REDIS_NAME=var.envVarRedisName
     }
   }
 }
